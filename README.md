@@ -13,7 +13,7 @@ Each project is built with HTML, CSS, and vanilla JavaScript—no frameworks, ju
 
 | # | Project Name         | Folder Name         | Description                               |
 |---|----------------------|---------------------|-------------------------------------------|
-| 1 | Drum Kit             | `01-drum-kit     `  | A responsive drum set                   |
-| 2 | Tip Calculator       | `02-tip-calculator` | Calculates tips with live UI updates      |
+| 1 | Drum Kit             | `01-drum-kit     `  | A responsive drum set                     |
+| 2 | Digital Clock       | `02-digital-clock`   | A real time digital clock                 |
 | 3 | Todo List            | `03-todo-list`      | A basic todo list with add/remove features|
 <!-- Add more rows as you go -->
