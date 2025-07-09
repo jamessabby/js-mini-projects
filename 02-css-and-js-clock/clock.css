@@ -1,0 +1,72 @@
+body {
+    background-color: #1A4756;
+    margin: 0; /* Ensures no default browser margin at the top */
+    padding: 0; /* Ensures no default browser padding */
+}
+
+h1 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 6rem;
+    color: #DBEDF3;
+    font-family: "Arvo", cursive;
+    font-weight: 900; /* Corrected: Removed 'px' as font-weight is unitless */
+    text-shadow: 5px 2px 10px black;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: 25px; /* Corrected: Removed space between 25 and px */
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.clock {
+    background-color: #facdc2;
+    width: 20rem;
+    height: 20rem;
+    border: 20px solid white;
+    border-radius: 50%;
+
+    margin: 50px auto;
+    padding: 2rem;
+    position: relative;
+    box-shadow:
+        0 0 0px 4px rgba(0,0,0,0.1),  /* Outer shadow: thin, subtle black border-like effect */
+        inset 0 0 10px #EFEFEF,        /* Inner shadow: soft, light grey highlight for subtle depth */
+        inset 0 0 10px black,         /* Inner shadow: darker, more diffused black for a sunken or debossed look */
+        10px 10px 30px 10px rgba(0,0,0,0.2);     /* Outer shadow: general, diffused black shadow for elevation */
+}
+
+.clock-face {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+}
+
+.hand {
+    background: black;
+    width: 50%;
+    height: 6px;
+
+    position: absolute;
+    top: 50%;
+
+    transform-origin: 100%;       /* The second hand rotates off of the righmost edge of the hour/min hand */
+    transform: rotate(90deg) ;    /* default starting point*/
+
+    transition: all 0.05s;        /* This makes the hands movement look like an actual clock */
+    transition-timing-function: cubic-bezier(0.03, 2.01, 0.58, 1); /* dev tool elements -> second hand -> element.style ->
+                                                                    typed this -> open cubic bezier editor -> drag the circle to the top -> copy-paste it here */
+}
+
+.credits {
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #DBEDF3;
+    margin-top: 20px;
+}
