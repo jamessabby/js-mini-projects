@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas</title>
+  <link rel="stylesheet" href="/07-html-canvas/canvas.css">
+</head>
+<body>
+  <canvas id="draw" width="800" height="800"></canvas>
+  <script src="/07-html-canvas/canvas.js"></script>
+</body>
+</html>
+
+<!--
+
+CANVAS SEQUENCE (Own understanding):
+
+- Create a variable that grabs the canvas to javascript
+- You don't directly draw on the HTML, you draw on "Context", so you need to grab it in 2D context
+- the default of context width and height is 800, so you need to set it equal to the window width and height 
+- set the strokeStyle, lineJoin, and lineCap of the context to "#BADA55", and both 'round'
+- set isDrawing to false initially, it becomes true when we clicked down our mouse to draw, and go back to false when we let go our mouse to hover around the canvas
+- create variables that help you save the location X and Y of a line because it needs a starting and end point
+- create a function that runs whenever you move the mouse on top of the canvas, 
+but inside this function, there should be a condition that stops it when the mouse isn't clicked down
+- create an event listener that runs when the mouse is clicked down so the isDrawing will be true
+- create an event listener that runs whenever you click down and move it so it runs the function
+- create another event listener that runs when the mouse is up or removed from being click down so that the isDrawing will be false
+- also create an event listener that will run whenever you move the mouse out of the window so it thinks that you stopped drawing 
+- modify the event listener so that whenever you start drawing, it draws a line starting somewhere, through .beginPath(), .moveTo(), and .lineTo();
+- make sure to include .stroke() so it can actually draw a line
+- set the starting location of X and Y in-sync with the .offsetX, and .offsetY property of the event
+- modify mousedown event listener, the lastX and lastY should update whenever you mousedown, it relocates the starting location to the new lastX and lastY
+
+-->
