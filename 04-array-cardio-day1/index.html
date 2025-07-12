@@ -89,8 +89,8 @@
 
       // Array.prototype.sort()
       // 3. Sort the inventors by birthdate, oldest to youngest
-      const ordered = inventors.sort((a, b) => (a.year > b.year ? 1 : -1));       // if a > b, put the older year after the younger year
-
+      const ordered = inventors.sort((a, b) => (a.year > b.year ? 1 : -1));       // if a > b, put the older year after the 
+                                                                                  // younger year
       console.table(ordered);
 
       // Array.prototype.reduce()
@@ -102,11 +102,11 @@
       }
       console.log(totalYear);                                                       // Adds their birth year
 
-      const totalYears = inventors.reduce((total, inventor) => {                    // array.reduce((accumulator, currentValue)) => {
+      const totalYears = inventors.reduce((total, inventor) => {// array.reduce((accumulator, currentValue)) => {              
         return total + (inventor.passed - inventor.year);                           // do something
       }, 0);                                                                        // }, initial value);
 
-      console.log(totalYears);                                                     // Adds how many years the've lived
+      console.log(totalYears);                                               // Adds how many years the've lived (more correct)
 
       // 5. Sort the inventors by years lived
       const oldest = inventors.sort(function (a, b) {
@@ -122,20 +122,23 @@
 
       // const category = document.querySelector(".mw-category");                  // put this in console of the website above
 
-      // const links = Array.from(category.querySelectorAll("a"));                 // converts the nodeList of links or (a) to an array
+      // const links = Array.from(category.querySelectorAll("a"));                 // converts the nodeList of links or (a) to 
+                                                                                  // an array
       // const de = links
-      //   .map((link) => link.textContent)                                        // goes to every link and Takes just the text content inside the link and 
-      //                                                                           // results to a new array of strings (just the names).
-      //   .filter((streetName) => streetName.includes("de"));                     // keep only the ones that include "de"
+      //   .map((link) => link.textContent)                                       // goes to every link and Takes just the 
+                                                                                  //text content inside the link and 
+                                                                                  // results to a new array of strings (just 
+                                                                                  //the names).
+      //   .filter((streetName) => streetName.includes("de"));                    // keep only the ones that include "de"
 
       // 7. sort Exercise
       // Sort the people alphabetically by last name
       const sortedName = people.sort((lastPerson, nextPerson) => {            // Example: "Becker, Carl" → ["Becker", "Carl"] 
-        const [aLast, aFirst] = lastPerson.split(", ");                            // aLast = "Becker"
-        const [bLast, bFirst] = nextPerson.split(", ");                            // aFirst = "Carl"
-        return aLast > bLast ? 1 : -1;                                             // // if aLast is later in alphabet, place it after bLast
-      });                                                                          // → this gives us A to Z order by last name                  
-      console.log(sortedName);
+        const [aLast, aFirst] = lastPerson.split(", ");                          // aLast = "Becker"
+        const [bLast, bFirst] = nextPerson.split(", ");                          // aFirst = "Carl"
+        return aLast > bLast ? 1 : -1;                                           // if aLast is later in alphabet, place 
+      });                                                                        // it after bLast                             
+      console.log(sortedName);                                                // → this gives us A to Z order by last name
 
       // 8. Reduce Exercise
       // Sum up the instances of each of these
@@ -157,8 +160,8 @@
       ];
 
       const transportation = data.reduce(function(obj, item){
-        if (!obj[item]) {           // item iterates in the array and if there's no object representation of it, it creates and initializes to 0 
-          obj[item] = 0;    
+        if (!obj[item]) {           // item iterates in the array and if there's no object representation of it, it creates 
+          obj[item] = 0;            // and initializes to 0 
         }
         obj[item]++;                // it increments every time you encounter the same item and put it in the object
         return obj;
