@@ -1,6 +1,6 @@
 const secondHand = document.querySelector(".second-hand");
 const minuteHand = document.querySelector(".min-hand");
-const hourHand = document.querySelector(".hour-hand");
+const hourHand = document.querySelector(".hour-hand")
 
 function setDate() {
   const now = new Date();
@@ -8,7 +8,7 @@ function setDate() {
   // SECONDS
   const seconds = now.getSeconds();
   const secondsDegrees = (((seconds / 60) * 360) + 90);           // we initially offset it by 90 degrees (default left to right) so the second hand 
-                                                                // still didn't fully rotated even when near 60 seconds, so we added 90 to make it top to bottom
+  // still didn't fully rotated even when near 60 seconds, so we added 90 to make it top to bottom
   secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
 
   // MINUTES
