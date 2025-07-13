@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dev Tool Tricks</title>
+</head>
+<body>
+  <p onClick="makeGreen()">CLICK THIS</p>
+  <script src="/07-must-know-dev-tricks/script.js"></script>
+</body>
+</html>
+
+<!--
+SOME DEV TRICKS:
+
+1. To see what part of the javascript is affecting your code, you can:
+  - Select and element in the page
+  - right click then choose 'Break On'
+  - select 'Attribute modifications'
+  - Now when you run that code, you'll see it in debugger mode
+
+    // --- console.log() ---
+  // Regular: Outputs a message to the console.
+  console.log('hello');
+
+  // Interpolated: Uses %s to substitute a string, and can include emojis.
+  console.log('Hello I am a %s string!', '💩');
+
+  // Styled: Uses %c to apply CSS styles to the console output.
+  console.log('%c I am some great text', 'font-size:50px; background:red; text-shadow:10px 10px 0 blue');
+
+  // --- console.warn() ---
+  // Outputs a warning message to the console. Often appears with a yellow warning icon.
+  console.warn('OH NOOO');
+
+  // --- console.error() ---
+  // Outputs an error message to the console. Often appears with a red error icon.
+  console.error('Shit!');
+
+  // --- console.info() ---
+  // Outputs an informational message to the console.
+  console.info('Crocodiles eat 3-4 people per year');
+
+  // --- console.assert() ---
+  // Asserts a condition. If the condition is false, it logs an error message to the console.
+  const p = document.querySelector('p'); // Assuming there's a <p> element in the HTML
+  console.assert(p.classList.contains('ouch'), 'That is wrong!'); // This will only log if 'p' does NOT have the class 'ouch'
+
+  // --- console.groupCollapsed() and console.groupEnd() ---
+  // Groups console messages together. console.groupCollapsed starts the group in a collapsed state.
+  const dogs = [
+    { name: 'Snickers', age: 2 },
+    { name: 'hugo', age: 8 },
+    { name: 'Wes', age: 7 },
+    { name: 'Steve', age: 5 },
+  ];
+
+  dogs.forEach(dog => {
+    console.groupCollapsed(`${dog.name}`); // Starts a collapsed group for each dog
+    console.log(`This is ${dog.name}`);
+    console.log(`${dog.name} is ${dog.age} years old`);
+    console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+    console.groupEnd(`${dog.name}`); // Ends the group for the current dog
+  });
+
+  // --- console.count() ---
+  // Logs the number of times that console.count() has been called with the same label.
+  console.count('Wes');
+  console.count('Steve');
+  console.count('Wes');
+  console.count('Wes');
+  console.count('Steve');
+  console.count('Steve');
+  console.count('Wes');
+  console.count('Steve');
+  console.count('Steve');
+  console.count('Steve');
+
+  // --- console.time() and console.timeEnd() ---
+  // Starts a timer you can use to track how long an operation takes.
+  // The label passed to time() should match the label passed to timeEnd().
+  console.time('fetching data');
+  fetch('https://api.github.com/users/wesbos') // Example API call
+    .then(data => data.json())
+    .then(data => {
+      console.timeEnd('fetching data'); // Stops the timer and logs the elapsed time
+      console.log(data); // Logs the fetched data
+    });
+
+  // --- console.table() ---
+  // Displays tabular data as a table in the console.
+  console.table(dogs);
+
+-->
