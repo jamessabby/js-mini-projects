@@ -1,6 +1,6 @@
 const checkboxes = document.querySelectorAll('.checkbox-container input[type="checkbox"]');
 
-let lastChecked;
+let lastChecked;  // this will hold the checkbox you just clicked
 
 checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));  // iterate over checkbox and runs this 
                                                                                   // callback function when clicked
