@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hold shift Checkbox</title>
+    <link rel="stylesheet" href="/09-hold-shift-checkbox/checkbox.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Hold shift to check multiple boxes</h1>
+      <h3>Mini project #4</h2>
+    </header>
+
+    <div class="checkbox-container">
+      <div class="item">
+        <input type="checkbox" />
+        <p>This is an inbox layout</p>
+      </div>
+      <div class="item">
+        <input type="checkbox" />
+        <p>Check one item</p>
+      </div>
+      <div class="item">
+        <input type="checkbox" />
+        <p>Hold down your shift key</p>
+      </div>
+      <div class="item">
+        <input type="checkbox" />
+        <p>Check a lower item</p>
+      </div>
+      <div class="item">
+        <input type="checkbox" />
+        <p>Everything in between should also be checked</p>
+      </div>
+      <div class="item">
+        <input type="checkbox" />
+        <p>Try to do it without any libraries</p>
+      </div>
+      <div class="item">
+        <input type="checkbox" />
+        <p>Just regular Javascript</p>
+      </div>
+      <div class="item">
+        <input type="checkbox" />
+        <p>Good luck!</p>
+      </div>
+      <div class="item">
+        <input type="checkbox" />
+        <p>Don't foget to tweet your result!</p>
+      </div>
+    </div>
+    <footer>Made by James Sabio</footer>
+    <script src="/09-hold-shift-checkbox/checkbox.js"></script>
+  </body>
+</html>
+
+<!--
+CHECKBOX  SEQUENCE (own understanding):
+
+1. select all the checkboxes inside the container
+2.  create a for loop that will iterate over the checkboxes and will run a function called handleCheck() when you click it
+3. create a function handleCheck(), create a condition that runs something when you hold shift key and the box is checked. 
+4. Also create a variable where it will hold the boolean value of what has been checked
+5. On top of the function, create a variable inBetween() set to false  initially
+6. create a for loop that will iterate over the checkboxes, inside it. there's an if staement that will check if the the first checkbox is checked, now it will run in between, or the last checkbox is checked, the boolean variable will be false
+
+-->
