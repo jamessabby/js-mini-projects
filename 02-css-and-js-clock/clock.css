@@ -57,7 +57,7 @@ h2 {
     transform-origin: 100%;       /* The second hand rotates off of the righmost edge of the hour/min hand */
     transform: rotate(90deg) ;    /* default starting point*/
 
-    transition: all 0.05s;        /* This makes the hands movement look like an actual clock */
+    transition: all 0.05s;       /* This makes the hands movement look like an actual clock */
     transition-timing-function: cubic-bezier(0.03, 2.01, 0.58, 1); /* dev tool elements -> second hand -> element.style ->
                                                                     typed this -> open cubic bezier editor -> drag the circle to the top -> copy-paste it here */
 }

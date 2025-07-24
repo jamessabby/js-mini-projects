@@ -1,0 +1,8 @@
+1. Get the elements and store them in constant variables
+2. Create a toggle function that would play or pause the video when clicked 
+  OR create a method that uses ternary operator '?'
+3. create an event listener that will play the video when you click around its area
+4. create an event listener that listens to the video whether it is played or pause, then a callback function will be called to update the icon of the 'toggle' class to pause or play
+5. create a function that handles the skipping buttons to skip through video times
+6. create an event listener that runs when the skip buttons are clicked
+7. create a funciton that handles the range update of volume and playback rate

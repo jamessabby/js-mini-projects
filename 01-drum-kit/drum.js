@@ -19,8 +19,9 @@ for (let i = 0; i < numberOfButtons; i++) {                                     
 // Detects the keyboard press 
    document.addEventListener("keydown", function(event) { // runs a function when you press a key
                                                           // event is the object that holds details about which key was pressed.
-    makeSound(event.key);                                 // if the type of event that happened is the same as the type of first parameter, 
-    buttonAnimation(event.key);                           // it  runs the call back function
+    makeSound(event.key);                                 // if the type of event that happened is the same as the type of first 
+                                                          // parameter, it runs the call back function
+    buttonAnimation(event.key);                           
    })
 
 function makeSound(key) {
