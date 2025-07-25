@@ -1,8 +1,22 @@
 1. Get the elements and store them in constant variables
 2. Create a toggle function that would play or pause the video when clicked 
   OR create a method that uses ternary operator '?'
+
 3. create an event listener that will play the video when you click around its area
+
 4. create an event listener that listens to the video whether it is played or pause, then a callback function will be called to update the icon of the 'toggle' class to pause or play
-5. create a function that handles the skipping buttons to skip through video times
-6. create an event listener that runs when the skip buttons are clicked
-7. create a funciton that handles the range update of volume and playback rate
+
+5. create an event listener that runs when any buttons who have the [skip-data] attribute are clicked
+
+6. create a function that handles the skipping buttons to skip through video times. Console log that skip dataset first then wrap it in a parse float and assign it to currentTime property
+
+7. create a function that handles the range update of volume and playback rate
+
+8. create a function that calculates the percentage of the progress bar and updates its width 
+
+9. create an event listener that listens to the time update and then run a callback function
+
+10. create an event listener that listens to a click and calls a callback function called 'scrub';
+
+11. create a function scrub that calculates the current offsetX of the area you clicked and divide it to the progress bar full width and multiply to the video duration
+
