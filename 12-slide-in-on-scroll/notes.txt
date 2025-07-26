@@ -1,0 +1,10 @@
+1. Select all the images
+2. create a function that will run everytime the window is scrolled
+3. when you console log the event scroll and you scrolled, it will log a lot and this is a performance issue because it's too much. That's when debounce() is useful because it will only run the function at most however many seconds. This function runs every 20 milliseconds
+4. create a function that loops through the images, the image should appear when the user scrolls through 50% of the image's body,
+  - grab the property that tells you how much you've scrolled down from the top of the browser and add it to the innerHeight of the window
+   - subtract that to the half the height of each image so when you're still approaching through that image, it will slide in whenever you hit the half of the image
+   - grab out where's the bottom of the image by using .offsetTop because it tells you how far the top of the image from the top of the browser and add that to the image height
+   - create a variable that has a condition that ensures you're already halfway through the image
+   - create a variable that has a condition that ensures you're still not scrolled past the image
+   - create an if statement that runs when you're haflway through the image and not scrolled past it, and if it's true you're gonna add the class of active, else remove it
