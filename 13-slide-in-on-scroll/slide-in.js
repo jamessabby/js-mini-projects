@@ -19,17 +19,17 @@
     sliderImages.forEach(sliderImage => {
       
       console.log("---------------------------------------");
-      console.log(`Window scrollY: ${window.scrollY}`);
-      console.log(`Window innerHeight: ${window.innerHeight}`);
-      console.log(`Image offsetTop: ${sliderImage.offsetTop}`);
-      console.log(`Image height: ${sliderImage.height}`);
+      console.log(`Window scrollY: ${window.scrollY}`);           // how far you've scrolled from top of page
+      console.log(`Window innerHeight: ${window.innerHeight}`);   //  height of your browser window
+      console.log(`Image offsetTop: ${sliderImage.offsetTop}`);   // distance from top of page to top of image 
+      console.log(`Image height: ${sliderImage.height}`);         // height of image 
 
-      const slideInAt = (window.innerHeight + window.scrollY) - sliderImage.height / 2;
+      const slideInAt = (window.innerHeight + window.scrollY) - sliderImage.height / 2;   // Just imagine that this is an invisible line 
       const bottomImage = sliderImage.offsetTop + sliderImage.height;
-      const halfImage = slideInAt > sliderImage.offsetTop;
-      const notScrolledPast = window.scrollY < bottomImage;
+      const isHalfImage = slideInAt > sliderImage.offsetTop;    // Trigger condition
+      const notScrolledPast = window.scrollY < bottomImage;     // The value of the very top of your window is not greater than the bottom of image
 
-      if (halfImage && notScrolledPast) {
+      if (isHalfImage && notScrolledPast) {
         sliderImage.classList.add('active');
       } else {
         sliderImage.classList.remove('active');
@@ -37,7 +37,7 @@
       console.log(" ");
       console.log(`Half of image location: ${slideInAt}`);
       console.log(`Bottom of image location: ${bottomImage}`);
-      console.log(`Already half the image?: ${halfImage}`);
+      console.log(`Already half the image?: ${isHalfImage}`);
       console.log(`Not scrolled past the image?: ${notScrolledPast}`);
       console.log("---------------------------------------");
 
